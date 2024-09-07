@@ -1,0 +1,253 @@
+CREATE DATABASE nursery;
+
+CREATE TABLE Branch
+(
+  name VARCHAR(50) NOT NULL,
+  city VARCHAR(20) NOT NULL,
+  zip_code INT NOT NULL,
+  email VARCHAR(50),
+  CONSTRAINT pk_email1 PRIMARY KEY (email)
+);
+
+CREATE TABLE viewer
+(
+  serial_number INT AUTO_INCREMENT,
+  country VARCHAR(30),
+  email VARCHAR(50),
+  CONSTRAINT fk_email2 FOREIGN KEY (email) REFERENCES Branch(email),
+  CONSTRAINT pk_serial_numb3 PRIMARY KEY (serial_number)
+);
+
+CREATE TABLE nursery_Admin
+(
+  admin_email VARCHAR(50),
+  admin_password VARCHAR(50) NOT NULL,
+  first_name VARCHAR(20) NOT NULL,
+  last_name VARCHAR(20) NOT NULL,
+  phone_number VARCHAR(15) NOT NULL,
+  gender VARCHAR(10) NOT NULL,
+  country VARCHAR(20) NOT NULL,
+  city VARCHAR(20) NOT NULL,
+  zip_code INT NOT NULL,
+  security_key VARCHAR(50) NOT NULL,
+  investment_ammount INT NOT NULL,
+  email VARCHAR(50),
+  CONSTRAINT pk_admin_email4 PRIMARY KEY (admin_email),
+  CONSTRAINT fk_email5 FOREIGN KEY (email) REFERENCES Branch(email)
+);
+
+CREATE TABLE discount
+(
+  coupon_code VARCHAR(20),
+  point INT NOT NULL,
+  dicount_name VARCHAR(70) NOT NULL,
+  percentage_of_dicount INT NOT NULL,
+  CONSTRAINT pk_coupon PRIMARY KEY (coupon_code)
+);
+
+CREATE TABLE nursery_user
+(
+  user_email VARCHAR(50),
+  user_password VARCHAR(50) NOT NULL,
+  earn_point INT,
+  join_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  last_name VARCHAR(20) NOT NULL,
+  first_name VARCHAR(20) NOT NULL,
+  town VARCHAR(30) NOT NULL,
+  house_no VARCHAR(20) NOT NULL,
+  zip_code INT NOT NULL,
+  gender VARCHAR(10) NOT NULL,
+  email VARCHAR(50),
+  coupon_code VARCHAR(20),
+  CONSTRAINT pk_user_email PRIMARY KEY (user_email),
+  CONSTRAINT fk_email6 FOREIGN KEY (email) REFERENCES Branch(email),
+  CONSTRAINT fk_coupon7 FOREIGN KEY (coupon_code) REFERENCES discount(coupon_code)
+);
+
+CREATE TABLE nursery_user_text_message
+(
+  text_message VARCHAR(1000) NOT NULL,
+  user_email VARCHAR(50),
+  CONSTRAINT fk_user_email8 FOREIGN KEY (user_email) REFERENCES nursery_user(user_email)
+);
+
+CREATE TABLE nursery_user_image_message
+(
+  image_message VARCHAR(50),
+  user_email VARCHAR(50),
+  CONSTRAINT fk_user_email9 FOREIGN KEY (user_email) REFERENCES nursery_user(user_email)
+);
+
+CREATE TABLE nursery_user_video_message
+(
+  video_message VARCHAR(50),
+  user_email VARCHAR(50),
+  CONSTRAINT fk_user_email10 FOREIGN KEY (user_email) REFERENCES nursery_user(user_email)
+);
+
+CREATE TABLE fertilizer
+(
+  action_time VARCHAR(30) NOT NULL,
+  cost FLOAT(7,2) NOT NULL,
+  fertilizer_code VARCHAR(50),
+  percentage_of_toxic INT,
+  type VARCHAR(30) NOT NULL,
+  name VARCHAR(50) NOT NULL,
+  CONSTRAINT pk_fertilizer PRIMARY KEY (fertilizer_code)
+);
+
+CREATE TABLE fertilizer_components
+(
+  components VARCHAR(50) NOT NULL,
+  fertilizer_code VARCHAR(50),
+  CONSTRAINT fk_fertilizer11 FOREIGN KEY (fertilizer_code) REFERENCES fertilizer(fertilizer_code)
+);
+
+CREATE TABLE plant
+(
+  name VARCHAR(50) NOT NULL,
+  serial_port INT AUTO_INCREMENT,
+  plant_code VARCHAR(10),
+  rating VARCHAR(10),
+  sold VARCHAR(10) NOT NULL,
+  price FLOAT(9,2) NOT NULL,
+  quantity INT NOT NULL,
+  plant_image VARCHAR(50),
+  seed VARCHAR(50),
+  CONSTRAINT pk_serial_plant1 PRIMARY KEY (serial_port, plant_code)
+);
+
+CREATE TABLE plant_text
+(
+  plant_text VARCHAR(50),
+  serial_port INT,
+  plant_code VARCHAR(10),
+  CONSTRAINT fk_serial_plant2 FOREIGN KEY (serial_port, plant_code) REFERENCES plant(serial_port, plant_code)
+);
+
+CREATE TABLE plant_image
+(
+  image VARCHAR(50),
+  serial_port INT,
+  plant_code VARCHAR(10),
+  CONSTRAINT fk_serial_plant FOREIGN KEY (serial_port, plant_code) REFERENCES plant(serial_port, plant_code)
+);
+
+CREATE TABLE plant_needed_fertillizer
+(
+  fertilizer_code VARCHAR(50),
+  serial_port INT,
+  plant_code VARCHAR(10),
+  CONSTRAINT fk_fertili FOREIGN KEY (fertilizer_code) REFERENCES fertilizer(fertilizer_code),
+  CONSTRAINT fk_seria10 FOREIGN KEY (serial_port, plant_code) REFERENCES plant(serial_port, plant_code)
+);
+
+CREATE TABLE Advise
+(
+  advise_text VARCHAR(1000),
+  serial_port INT,
+  plant_code VARCHAR(10),
+  CONSTRAINT fk_plant_serial1 FOREIGN KEY (serial_port, plant_code) REFERENCES plant(serial_port, plant_code)
+);
+
+CREATE TABLE job_seeker
+(
+  email VARCHAR(50),
+  phone_number VARCHAR(15) NOT NULL,
+  first_name VARCHAR(20) NOT NULL,
+  last_name VARCHAR(20) NOT NULL,
+  date_of_birth VARCHAR(15) NOT NULL,
+  sector_name VARCHAR(20) NOT NULL,
+  instute_name VARCHAR(20) NOT NULL,
+  city VARCHAR(20) NOT NULL,
+  zip_code INT NOT NULL,
+  admin_email VARCHAR(50),
+  CONSTRAINT pk_email22 PRIMARY KEY (email),
+  CONSTRAINT fk_22 FOREIGN KEY (admin_email) REFERENCES nursery_Admin(admin_email)
+);
+
+CREATE TABLE employee
+(
+  employee_email VARCHAR(50),
+  employee_password VARCHAR(50) NOT NULL,
+  first_name VARCHAR(20) NOT NULL,
+  last_name VARCHAR(20) NOT NULL,
+  gender VARCHAR(10) NOT NULL,
+  phone_number VARCHAR(15) NOT NULL,
+  work_hour INT NOT NULL,
+  city VARCHAR(20) NOT NULL,
+  zip_code INT NOT NULL,
+  house_no VARCHAR(20) NOT NULL,
+  date_of_birth VARCHAR(20) NOT NULL,
+  join_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  salary FLOAT(9,2) NOT NULL,
+  security_key VARCHAR(50) NOT NULL,
+  admin_email VARCHAR(50),
+  coupon_code VARCHAR(20),
+  CONSTRAINT pk_23 PRIMARY KEY (employee_email),
+  CONSTRAINT fk_24 FOREIGN KEY (admin_email) REFERENCES nursery_Admin(admin_email),
+  CONSTRAINT fk_25 FOREIGN KEY (coupon_code) REFERENCES discount(coupon_code)
+);
+
+CREATE TABLE employee_text_message
+(
+  text_message VARCHAR(1000) NOT NULL,
+  employee_email VARCHAR(50),
+  CONSTRAINT fk_26 FOREIGN KEY (employee_email) REFERENCES employee(employee_email)
+);
+
+CREATE TABLE employee_video
+(
+  video VARCHAR(50),
+  employee_email VARCHAR(50),
+  CONSTRAINT fk_27 FOREIGN KEY (employee_email) REFERENCES employee(employee_email)
+);
+
+CREATE TABLE employee_image
+(
+  image VARCHAR(50),
+  employee_email VARCHAR(50),
+  CONSTRAINT fk_28 FOREIGN KEY (employee_email) REFERENCES employee(employee_email)
+);
+
+CREATE TABLE online_delivery
+(
+  per_delivery_cost FLOAT(5,2) NOT NULL,
+  estimate_time VARCHAR(50) NOT NULL,
+  oder_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  return_time VARCHAR(30),
+  online_payment VARCHAR(20),
+  cash_on_delivery VARCHAR(10),
+  coupon_code VARCHAR(20),
+  employee_email VARCHAR(50),
+  CONSTRAINT fk_cupon30 FOREIGN KEY (coupon_code) REFERENCES discount(coupon_code),
+  CONSTRAINT fk_employee30 FOREIGN KEY (employee_email) REFERENCES employee(employee_email)
+);
+
+CREATE TABLE soil
+(
+  quantity INT NOT NULL,
+  soil_code INT,
+  soil_name VARCHAR(15) NOT NULL,
+  cost FLOAT(9,2) NOT NULL,
+  serial_port INT,
+  plant_code VARCHAR(10),
+  CONSTRAINT pk_soil_code PRIMARY KEY (soil_code),
+  CONSTRAINT fk_serialPlant FOREIGN KEY (serial_port, plant_code) REFERENCES plant(serial_port, plant_code)
+);
+
+CREATE TABLE employee_takeCare_plant
+(
+  serial_port INT,
+  plant_code VARCHAR(10),
+  employee_email VARCHAR(50),
+  CONSTRAINT fk_serialPlant2 FOREIGN KEY (serial_port, plant_code) REFERENCES plant(serial_port, plant_code),
+  CONSTRAINT fk_employee_email31 FOREIGN KEY (employee_email) REFERENCES employee(employee_email)
+);
+
+CREATE TABLE job_seeker_computer_skill
+(
+  computer_skill VARCHAR(50),
+  email VARCHAR(50),
+  CONSTRAINT fk_email33 FOREIGN KEY (email) REFERENCES job_seeker(email)
+);

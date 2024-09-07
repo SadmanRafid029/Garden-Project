@@ -1,0 +1,298 @@
+INSERT INTO branch(name,city,zip_code,email)
+VALUES("Dhaka Nursery","Dhaka",6700,"dhakanursery@gmail.com");
+
+
+INSERT INTO nursery_admin(admin_email,admin_password,first_name,last_name,phone_number,gender,country,city,zip_code,security_key,investment_ammount,email)
+VALUES("mtalukdar201056@bscse.uiu.ac.bd","mithu talukdar","Md. Mushfikur","Talukdar","01797381244","Male","Bangladesh","Dhaka",6700,"mithu talukdar",100000,"dhakanursery@gmail.com");
+INSERT INTO nursery_admin(admin_email,admin_password,first_name,last_name,phone_number,gender,country,city,zip_code,security_key,investment_ammount,email)
+VALUES("sritu191016@bscse.uiu.ac.bd","ritu","Sanjida Yesmin","Ritu","01797111111","Female","Bangladesh","Dhaka",6700,"ritu",100000,"dhakanursery@gmail.com");
+INSERT INTO nursery_admin(admin_email,admin_password,first_name,last_name,phone_number,gender,country,city,zip_code,security_key,investment_ammount,email)
+VALUES("shasan191215@bscse.uiu.ac.bd","sadia","Sadia","Hasan","01797211111","Female","Bangladesh","Dhaka",6700,"sadia",100000,"dhakanursery@gmail.com");
+
+
+INSERT INTO discount(discount_name,percentage_of_discount,coupon_code)
+VALUES("New Account",50,"NEW50ACCOUNT");
+INSERT INTO discount(discount_name,percentage_of_discount,coupon_code)
+VALUES("New Year",10,"NEW10YEAR");
+INSERT INTO discount(discount_name,percentage_of_discount,coupon_code)
+VALUES("Eid",30,"EID30");
+INSERT INTO discount(discount_name,percentage_of_discount,coupon_code)
+VALUES("Puja",10,"PUJA10");
+INSERT INTO discount(discount_name,percentage_of_discount,coupon_code)
+VALUES("Crismas",10,"CRISMAS10");
+INSERT INTO discount(discount_name,percentage_of_discount,coupon_code)
+VALUES("Employee",15,"EMPLOYEE15");
+
+
+INSERT INTO employee(employee_email,employee_password,first_name,last_name,gender,phone_number,salary,work_hour,city,zip_code,house_no,date_of_birth,admin_email,coupon_code)
+VALUES("adaloveless@gmail.com","adaloveless","Ada","Love Less","Female","01797381242",5000,6,"Dhaka",6700,"32","10-10-1996","mtalukdar201056@bscse.uiu.ac.bd","EMPLOYEE15");
+INSERT INTO employee(employee_email,employee_password,first_name,last_name,gender,phone_number,salary,work_hour,city,zip_code,house_no,date_of_birth,admin_email,coupon_code)
+VALUES("princedayna@gmail.com","princedayna","Prince","Dayna","Female","01797381240",5000,6,"Dhaka",6700,"39","10-13-1997","mtalukdar201056@bscse.uiu.ac.bd","EMPLOYEE15");
+INSERT INTO employee(employee_email,employee_password,first_name,last_name,gender,phone_number,salary,work_hour,city,zip_code,house_no,date_of_birth,admin_email,coupon_code)
+VALUES("harrypoter@gmail.com","harrypoter","Harry","Poter","Male","01797381212",4000,6,"Borishal",3700,"32","19-1-1991","sritu191016@bscse.uiu.ac.bd","EMPLOYEE15");
+INSERT INTO employee(employee_email,employee_password,first_name,last_name,gender,phone_number,salary,work_hour,city,zip_code,house_no,date_of_birth,admin_email,coupon_code)
+VALUES("rokey@gmail.com","rokey","Mr. ","Rokey","Male","01797381214",4500,6,"Borishal",3700,"33","19-1-1991","sritu191016@bscse.uiu.ac.bd","EMPLOYEE15");
+INSERT INTO employee(employee_email,employee_password,first_name,last_name,gender,phone_number,salary,work_hour,city,zip_code,house_no,date_of_birth,admin_email,coupon_code)
+VALUES("rustom@gmail.com","rustom","Md","Rustom","Male","01797384242",44000,6,"Dhaka",6700,"32","10-12-1994","shasan191215@bscse.uiu.ac.bd","EMPLOYEE15");
+
+
+
+INSERT INTO plant(name,serial_port,plant_code,rating,price,sold,seed,quantity)
+VALUES("Mini Cactus Plants",1,"deco","None",250,"no","no",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Red Grafted Moon Cactus","deco","None",300,"no","no",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Orchid Flower Plant","deco","None",350,"no","no",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Bromeliad orchid","deco","None",400,"no","no",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Verykatet Mini Ficust","deco","None",450,"no","no",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Cassia fistula","flower","None",500,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Bauhinia","flower","None",550,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Saraca asoca","flower","None",660,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Acacia-Auriculiformis","flower","None",600,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Aster","flower","None",530,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Amrapali Indian","fru","None",520,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Dragon Fruit","fru","None",510,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Terminalia-Catappa","fru","None",480,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Custard Apple","fru","None",460,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Malay Apple Tree","fru","None",555,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Wild Rice","seed","None",430,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Pumpkin Seeds","seed","None",300,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Pomegranate Seeds","seed","None",270,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Quinoa","seed","None",700,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Flax Seeds","seed","None",690,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Aini","wood","None",655,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Ainl","wood","None",100,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Arjun","wood","None",156,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Axlewood","wood","None",245,"no","yes",1);
+INSERT INTO plant(name,plant_code,rating,price,sold,seed,quantity)
+VALUES("Coconut","wood","None",210,"no","yes",1);
+
+
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(1,"deco","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(2,"deco","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(3,"deco","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(4,"deco","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(5,"deco","princedayna@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(6,"flower","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(7,"flower","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(8,"flower","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(9,"flower","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(10,"flower","princedayna@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(11,"fru","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(12,"fru","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(13,"fru","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(14,"fru","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(15,"fru","princedayna@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(16,"seed","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(17,"seed","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(18,"seed","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(19,"seed","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(20,"seed","princedayna@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(21,"wood","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(22,"wood","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(23,"wood","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(24,"wood","adaloveless@gmail.com");
+INSERT INTO employee_takecare_plant(serial_port,plant_code,employee_email)
+VALUES(25,"wood","princedayna@gmail.com");
+
+
+
+INSERT INTO fertilizer(action_time,cost,fertilizer_code,percentage_of_toxic,type,name)
+VALUES("between 12 to 24 hours",140,"ASul",10,"Ammoniacal","Ammonium Sulphate");
+INSERT INTO fertilizer(action_time,cost,fertilizer_code,percentage_of_toxic,type,name)
+VALUES("between 3 to 6 hours",210,"AChl",12,"Ammoniacal","Ammonium chloride");
+INSERT INTO fertilizer(action_time,cost,fertilizer_code,percentage_of_toxic,type,name)
+VALUES("about 1 week",120,"AAmm",16,"Ammoniacal","Anhydrous ammonia");
+INSERT INTO fertilizer(action_time,cost,fertilizer_code,percentage_of_toxic,type,name)
+VALUES("24 hours",110,"SNC",9,"Nitrate","Sodium Nitrate Calcium");
+INSERT INTO fertilizer(action_time,cost,fertilizer_code,percentage_of_toxic,type,name)
+VALUES("two weeks",25,"NPN",8,"Nitrate","Nitrate Potassium Nitrate");
+
+
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("21.20 percent Nitrogen","ASul");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("6.10 percent Hydrogen","ASul");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("24.26 percent Sulfur","ASul");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("ammonium sulfate","AChl");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("NaCl","AChl");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("nitrogen and hydrogen","AAmm");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("Nitrate of soda","SNC");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("Chile saltpeter","SNC");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("Cubic niter","SNC");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("potassium","NPN");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("oxygen","NPN");
+INSERT INTO fertilizer_components(components,fertilizer_code)
+VALUES("nitrogen","NPN");
+
+
+INSERT INTO viewer(serial_number,country,email)
+VALUES(1,"Bangladesh","dhakanursery@gmail.com");
+INSERT INTO viewer(country,email)
+VALUES("Bangladesh","dhakanursery@gmail.com");
+INSERT INTO viewer(country,email)
+VALUES("Bangladesh","dhakanursery@gmail.com");
+INSERT INTO viewer(country,email)
+VALUES("India","dhakanursery@gmail.com");
+INSERT INTO viewer(country,email)
+VALUES("Nepal","dhakanursery@gmail.com");
+
+
+INSERT INTO soil(quantity,soil_code,soil_name,cost,serial_port,plant_code)
+VALUES("1 kg","1","Peat Soil",42.4,1,"deco");
+INSERT INTO soil(quantity,soil_code,soil_name,cost,serial_port,plant_code)
+VALUES("1 kg","2","Chalk Soil",26,2,"deco");
+INSERT INTO soil(quantity,soil_code,soil_name,cost,serial_port,plant_code)
+VALUES("1 kg","3","Loam Soil",36,3,"deco");
+INSERT INTO soil(quantity,soil_code,soil_name,cost,serial_port,plant_code)
+VALUES("1 kg","4","Silt Soil",16,4,"deco");
+INSERT INTO soil(quantity,soil_code,soil_name,cost,serial_port,plant_code)
+VALUES("1 kg","5","Clay Soil",12,5,"deco");
+
+
+INSERT INTO job_seeker(email,phone_number,first_name,last_name,date_of_birth,sector_name,instute_name,city,zip_code,admin_email)
+VALUES("rubber@gmail.com","01784542154","Mr.","Rubber","19-3-1995","BBA","NSU","Dhaka",6700,"mtalukdar201056@bscse.uiu.ac.bd");
+INSERT INTO job_seeker(email,phone_number,first_name,last_name,date_of_birth,sector_name,instute_name,city,zip_code,admin_email)
+VALUES("rokey@gmail.com","01744542154","Mr.","Rokey","10-10-1993","BBA","NSU","Dhaka",6700,"sritu191016@bscse.uiu.ac.bd");
+INSERT INTO job_seeker(email,phone_number,first_name,last_name,date_of_birth,sector_name,instute_name,city,zip_code,admin_email)
+VALUES("monty@gmail.com","01756542154","Mr.","Monty","30-10-1993","BBA","NSU","Dhaka",6700,"sritu191016@bscse.uiu.ac.bd");
+INSERT INTO job_seeker(email,phone_number,first_name,last_name,date_of_birth,sector_name,instute_name,city,zip_code,admin_email)
+VALUES("sinthiya@gmail.com","01756542154","Ms ","Sinthiya","31-12-1993","BBA","NSU","Dhaka",6700,"shasan191215@bscse.uiu.ac.bd");
+INSERT INTO job_seeker(email,phone_number,first_name,last_name,date_of_birth,sector_name,instute_name,city,zip_code,admin_email)
+VALUES("mirja@gmail.com","01756542154","Md.","Mirja","11-2-1998","BBA","NSU","Dhaka",6700,"shasan191215@bscse.uiu.ac.bd");
+
+
+INSERT INTO job_seeker_computer_skill(computer_skill,email)
+VALUES("XL","mirja@gmail.com");
+INSERT INTO job_seeker_computer_skill(computer_skill,email)
+VALUES("MS Word","mirja@gmail.com");
+INSERT INTO job_seeker_computer_skill(computer_skill,email)
+VALUES("XL","monty@gmail.com");
+INSERT INTO job_seeker_computer_skill(computer_skill,email)
+VALUES("Word","monty@gmail.com");
+INSERT INTO job_seeker_computer_skill(computer_skill,email)
+VALUES("Word","rokey@gmail.com");
+INSERT INTO job_seeker_computer_skill(computer_skill,email)
+VALUES("Word","mirja@gmail.com");
+INSERT INTO job_seeker_computer_skill(computer_skill,email)
+VALUES("XL","rubber@gmail.com");
+INSERT INTO job_seeker_computer_skill(computer_skill,email)
+VALUES("Word","sinthiya@gmail.com");
+
+
+INSERT INTO nursery_user(user_email,user_password,earn_point,last_name,first_name,town,house_no,zip_code,gender,email,coupon_code)
+VALUES("tubelight@gmail.com","tubelite",0,"Light","Tube","Dhaka","32",6700,"Male","dhakanursery@gmail.com","NEW50ACCOUNT");
+INSERT INTO nursery_user(user_email,user_password,earn_point,last_name,first_name,town,house_no,zip_code,gender,email,coupon_code)
+VALUES("siddik@gmail.com","siddik",0,"Siddik","Md ","Dhaka","33",6700,"Male","dhakanursery@gmail.com","NEW50ACCOUNT");
+INSERT INTO nursery_user(user_email,user_password,earn_point,last_name,first_name,town,house_no,zip_code,gender,email,coupon_code)
+VALUES("rifat@gmail.com","rifat",0,"Rifat","Md ","Dhaka","39",6700,"Male","dhakanursery@gmail.com","NEW50ACCOUNT");
+INSERT INTO nursery_user(user_email,user_password,earn_point,last_name,first_name,town,house_no,zip_code,gender,email,coupon_code)
+VALUES("joni@gmail.com","joni",0,"Joni","Md ","Dhaka","22",6700,"Male","dhakanursery@gmail.com","NEW50ACCOUNT");
+INSERT INTO nursery_user(user_email,user_password,earn_point,last_name,first_name,town,house_no,zip_code,gender,email,coupon_code)
+VALUES("rittik@gmail.com","rittik",0,"Rittik","Mr ","Dhaka","12",6700,"Male","dhakanursery@gmail.com","NEW50ACCOUNT");
+
+
+INSERT INTO online_delivery(per_delivery_cost,estimate_time,return_time,employee_email,coupon_code)
+VALUES(30,"7 days","5 days","harrypoter@gmail.com","NEW10YEAR");
+INSERT INTO online_delivery(per_delivery_cost,estimate_time,return_time,employee_email,coupon_code)
+VALUES(30,"7 days","5 days","harrypoter@gmail.com","NEW10YEAR");
+INSERT INTO online_delivery(per_delivery_cost,estimate_time,return_time,employee_email,coupon_code)
+VALUES(30,"7 days","5 days","harrypoter@gmail.com","NEW10YEAR");
+INSERT INTO online_delivery(per_delivery_cost,estimate_time,return_time,employee_email,coupon_code)
+VALUES(30,"7 days","5 days","harrypoter@gmail.com","NEW10YEAR");
+INSERT INTO online_delivery(per_delivery_cost,estimate_time,return_time,employee_email,coupon_code)
+VALUES(30,"7 days","5 days","harrypoter@gmail.com","NEW10YEAR");
+
+
+INSERT INTO plant_needed_fertillizer(fertilizer_code,serial_port,plant_code)
+VALUES("AAmm",13,"fru");
+INSERT INTO plant_needed_fertillizer(fertilizer_code,serial_port,plant_code)
+VALUES("AChl",13,"fru");
+INSERT INTO plant_needed_fertillizer(fertilizer_code,serial_port,plant_code)
+VALUES("ASul",21,"wood");
+INSERT INTO plant_needed_fertillizer(fertilizer_code,serial_port,plant_code)
+VALUES("NPN",21,"wood");
+INSERT INTO plant_needed_fertillizer(fertilizer_code,serial_port,plant_code)
+VALUES("SNC",21,"wood");
+
+
+INSERT INTO plant_image(image,serial_port,plant_code)
+VALUES("image/Mini Cactus Plants.JPEG",1,"deco");
+INSERT INTO plant_image(image,serial_port,plant_code)
+VALUES("image/Red Grafted Moon Cactus.JPG",2,"deco");
+INSERT INTO plant_image(image,serial_port,plant_code)
+VALUES("image/Orchid Flower Plant.JPG",3,"deco");
+INSERT INTO plant_image(image,serial_port,plant_code)
+VALUES("image/Bromeliad orchid.JPG",4,"deco");
+INSERT INTO plant_image(image,serial_port,plant_code)
+VALUES("image/Verykatet Mini Ficust.JPG",5,"deco");
+
+
+INSERT INTO advise(advise_text,serial_port,plant_code)
+VALUES("You do, in fact, have to water them.",1,"deco");
+INSERT INTO advise(advise_text,serial_port,plant_code)
+VALUES("Moon Cactus Features: An Overview. The most common cultivars of this species are different mutant variations. Growers will often graft them onto ",2,"deco");
+INSERT INTO advise(advise_text,serial_port,plant_code)
+VALUES("They will not survive in a dark spot.",1,"deco");
+INSERT INTO advise(advise_text,serial_port,plant_code)
+VALUES("Your planter should always have a drainage hole.",1,"deco");
+INSERT INTO advise(advise_text,serial_port,plant_code)
+VALUES("Stop misting your cacti and succulents. ",1,"deco");
+INSERT INTO advise(advise_text,serial_port,plant_code)
+VALUES("Small plants are harder to take care of than large ones.",1,"deco");
+
+
